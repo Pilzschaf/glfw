@@ -95,6 +95,7 @@ GLFWbool _glfwConnectNull(int platformID, _GLFWplatform* platform)
         _glfwWindowVisibleNull,
         _glfwWindowMaximizedNull,
         _glfwWindowHoveredNull,
+        _glfwWindowDraggingNull,
         _glfwFramebufferTransparentNull,
         _glfwGetWindowOpacityNull,
         _glfwSetWindowResizableNull,

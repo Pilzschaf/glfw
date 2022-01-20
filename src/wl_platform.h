@@ -449,6 +449,7 @@ int _glfwWindowIconifiedWayland(_GLFWwindow* window);
 int _glfwWindowVisibleWayland(_GLFWwindow* window);
 int _glfwWindowMaximizedWayland(_GLFWwindow* window);
 int _glfwWindowHoveredWayland(_GLFWwindow* window);
+int _glfwWindowDraggingWayland(_GLFWwindow* window);
 int _glfwFramebufferTransparentWayland(_GLFWwindow* window);
 void _glfwSetWindowResizableWayland(_GLFWwindow* window, GLFWbool enabled);
 void _glfwSetWindowDecoratedWayland(_GLFWwindow* window, GLFWbool enabled);

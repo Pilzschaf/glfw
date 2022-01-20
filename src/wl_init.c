@@ -1096,6 +1096,7 @@ GLFWbool _glfwConnectWayland(int platformID, _GLFWplatform* platform)
         _glfwWindowVisibleWayland,
         _glfwWindowMaximizedWayland,
         _glfwWindowHoveredWayland,
+        _glfwWindowDraggingWayland,
         _glfwFramebufferTransparentWayland,
         _glfwGetWindowOpacityWayland,
         _glfwSetWindowResizableWayland,

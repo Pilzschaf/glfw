@@ -729,6 +729,7 @@ struct _GLFWplatform
     int (*windowVisible)(_GLFWwindow*);
     int (*windowMaximized)(_GLFWwindow*);
     int (*windowHovered)(_GLFWwindow*);
+    int (*windowDragging)(_GLFWwindow*);
     int (*framebufferTransparent)(_GLFWwindow*);
     float (*getWindowOpacity)(_GLFWwindow*);
     void (*setWindowResizable)(_GLFWwindow*,GLFWbool);

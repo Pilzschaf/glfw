@@ -104,6 +104,7 @@ void _glfwRestoreWindowNull(_GLFWwindow* window);
 void _glfwMaximizeWindowNull(_GLFWwindow* window);
 int _glfwWindowMaximizedNull(_GLFWwindow* window);
 int _glfwWindowHoveredNull(_GLFWwindow* window);
+int _glfwWindowDraggingNull(_GLFWwindow* window);
 int _glfwFramebufferTransparentNull(_GLFWwindow* window);
 void _glfwSetWindowResizableNull(_GLFWwindow* window, GLFWbool enabled);
 void _glfwSetWindowDecoratedNull(_GLFWwindow* window, GLFWbool enabled);

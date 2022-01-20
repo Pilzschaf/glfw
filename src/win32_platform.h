@@ -560,6 +560,7 @@ int _glfwWindowIconifiedWin32(_GLFWwindow* window);
 int _glfwWindowVisibleWin32(_GLFWwindow* window);
 int _glfwWindowMaximizedWin32(_GLFWwindow* window);
 int _glfwWindowHoveredWin32(_GLFWwindow* window);
+int _glfwWindowDraggingWin32(_GLFWwindow* window);
 int _glfwFramebufferTransparentWin32(_GLFWwindow* window);
 void _glfwSetWindowResizableWin32(_GLFWwindow* window, GLFWbool enabled);
 void _glfwSetWindowDecoratedWin32(_GLFWwindow* window, GLFWbool enabled);
