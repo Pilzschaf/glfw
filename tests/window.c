@@ -408,6 +408,7 @@ int main(int argc, char** argv)
 
             nk_value_bool(nk, "Focused", glfwGetWindowAttrib(window, GLFW_FOCUSED));
             nk_value_bool(nk, "Hovered", glfwGetWindowAttrib(window, GLFW_HOVERED));
+            nk_value_bool(nk, "Dragging", glfwGetWindowAttrib(window, GLFW_DRAGGING));
             nk_value_bool(nk, "Visible", glfwGetWindowAttrib(window, GLFW_VISIBLE));
             nk_value_bool(nk, "Iconified", glfwGetWindowAttrib(window, GLFW_ICONIFIED));
             nk_value_bool(nk, "Maximized", glfwGetWindowAttrib(window, GLFW_MAXIMIZED));

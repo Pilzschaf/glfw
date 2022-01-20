@@ -357,6 +357,11 @@ int _glfwWindowHoveredNull(_GLFWwindow* window)
            _glfw.null.ycursor <= window->null.ypos + window->null.height - 1;
 }
 
+int _glfwWindowDraggingNull(_GLFWwindow* window)
+{
+    return 0;
+}
+
 int _glfwFramebufferTransparentNull(_GLFWwindow* window)
 {
     return window->null.transparent;

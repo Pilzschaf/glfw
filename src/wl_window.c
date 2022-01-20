@@ -1083,6 +1083,11 @@ int _glfwWindowHoveredWayland(_GLFWwindow* window)
     return window->wl.hovered;
 }
 
+int _glfwWindowDraggingWayland(_GLFWwindow* window)
+{
+    return GLFW_FALSE;
+}
+
 int _glfwFramebufferTransparentWayland(_GLFWwindow* window)
 {
     return window->wl.transparent;

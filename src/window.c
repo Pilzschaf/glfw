@@ -845,6 +845,8 @@ GLFWAPI int glfwGetWindowAttrib(GLFWwindow* handle, int attrib)
             return window->autoIconify;
         case GLFW_DOUBLEBUFFER:
             return window->doublebuffer;
+        case GLFW_DRAGGING:
+            return _glfw.platform.windowDragging(window);
         case GLFW_CLIENT_API:
             return window->context.client;
         case GLFW_CONTEXT_CREATION_API:

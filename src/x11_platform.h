@@ -618,6 +618,7 @@ typedef struct _GLFWlibraryX11
     Atom            XdndEnter;
     Atom            XdndPosition;
     Atom            XdndStatus;
+    Atom            XdndLeave;
     Atom            XdndActionCopy;
     Atom            XdndDrop;
     Atom            XdndFinished;
@@ -924,6 +925,7 @@ int _glfwWindowIconifiedX11(_GLFWwindow* window);
 int _glfwWindowVisibleX11(_GLFWwindow* window);
 int _glfwWindowMaximizedX11(_GLFWwindow* window);
 int _glfwWindowHoveredX11(_GLFWwindow* window);
+int _glfwWindowDraggingX11(_GLFWwindow* windw);
 int _glfwFramebufferTransparentX11(_GLFWwindow* window);
 void _glfwSetWindowResizableX11(_GLFWwindow* window, GLFWbool enabled);
 void _glfwSetWindowDecoratedX11(_GLFWwindow* window, GLFWbool enabled);

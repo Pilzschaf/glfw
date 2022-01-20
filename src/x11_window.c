@@ -1588,6 +1588,8 @@ static void processEvent(XEvent *event)
                     }
                 }
 
+                _glfwInputCursorEnter(window, GLFW_TRUE);
+
                 if (list && formats)
                     XFree(formats);
             }
@@ -1611,6 +1613,9 @@ static void processEvent(XEvent *event)
                                       _glfw.x11.XdndSelection,
                                       window->x11.handle,
                                       time);
+                    
+                    // Reset the format
+                    _glfw.x11.xdnd.format = 0;
                 }
                 else if (_glfw.x11.xdnd.version >= 2)
                 {
@@ -1666,6 +1671,12 @@ static void processEvent(XEvent *event)
                 XSendEvent(_glfw.x11.display, _glfw.x11.xdnd.source,
                            False, NoEventMask, &reply);
                 XFlush(_glfw.x11.display);
+            }
+            else if(event->xclient.message_type == _glfw.x11.XdndLeave)
+            {
+                // The drag has been cancelled or left the window
+                _glfw.x11.xdnd.format = 0;
+                _glfwInputCursorEnter(window, GLFW_FALSE);
             }
 
             return;
@@ -2566,6 +2577,17 @@ int _glfwWindowHoveredX11(_GLFWwindow* window)
             return GLFW_TRUE;
     }
 
+    return GLFW_FALSE;
+}
+
+int _glfwWindowDraggingX11(_GLFWwindow* window)
+{
+    //_glfw.x11.xdnd.version;
+    //_glfw.x11.xdnd.source;
+    //_glfw.x11.xdnd.format;
+    if(_glfw.x11.xdnd.format) {
+        return GLFW_TRUE;
+    }
     return GLFW_FALSE;
 }
 

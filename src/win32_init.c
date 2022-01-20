@@ -595,6 +595,7 @@ GLFWbool _glfwConnectWin32(int platformID, _GLFWplatform* platform)
         _glfwWindowVisibleWin32,
         _glfwWindowMaximizedWin32,
         _glfwWindowHoveredWin32,
+        _glfwWindowDraggingWin32,
         _glfwFramebufferTransparentWin32,
         _glfwGetWindowOpacityWin32,
         _glfwSetWindowResizableWin32,

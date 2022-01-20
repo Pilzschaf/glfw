@@ -282,6 +282,7 @@ typedef struct _GLFWlibraryWayland
     struct wl_data_device*      dataDevice;
     struct wl_data_offer*       dataOffer;
     struct wl_data_source*      dataSource;
+    struct wl_data_offer*       dragDataOffer;
     struct xdg_wm_base*         wmBase;
     struct zxdg_decoration_manager_v1*      decorationManager;
     struct wp_viewporter*       viewporter;
@@ -299,6 +300,7 @@ typedef struct _GLFWlibraryWayland
     int                         cursorTimerfd;
     uint32_t                    serial;
     uint32_t                    pointerEnterSerial;
+    uint32_t                    dragSerial;
 
     int32_t                     keyboardRepeatRate;
     int32_t                     keyboardRepeatDelay;
@@ -354,6 +356,7 @@ typedef struct _GLFWlibraryWayland
 
     _GLFWwindow*                pointerFocus;
     _GLFWwindow*                keyboardFocus;
+    _GLFWwindow*                dragFocus;
 
     struct {
         void*                                       handle;
@@ -449,6 +452,7 @@ int _glfwWindowIconifiedWayland(_GLFWwindow* window);
 int _glfwWindowVisibleWayland(_GLFWwindow* window);
 int _glfwWindowMaximizedWayland(_GLFWwindow* window);
 int _glfwWindowHoveredWayland(_GLFWwindow* window);
+int _glfwWindowDraggingWayland(_GLFWwindow* window);
 int _glfwFramebufferTransparentWayland(_GLFWwindow* window);
 void _glfwSetWindowResizableWayland(_GLFWwindow* window, GLFWbool enabled);
 void _glfwSetWindowDecoratedWayland(_GLFWwindow* window, GLFWbool enabled);

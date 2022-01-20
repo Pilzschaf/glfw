@@ -934,6 +934,7 @@ static GLFWbool initExtensions(void)
     _glfw.x11.XdndEnter = XInternAtom(_glfw.x11.display, "XdndEnter", False);
     _glfw.x11.XdndPosition = XInternAtom(_glfw.x11.display, "XdndPosition", False);
     _glfw.x11.XdndStatus = XInternAtom(_glfw.x11.display, "XdndStatus", False);
+    _glfw.x11.XdndLeave = XInternAtom(_glfw.x11.display, "XdndLeave", False);
     _glfw.x11.XdndActionCopy = XInternAtom(_glfw.x11.display, "XdndActionCopy", False);
     _glfw.x11.XdndDrop = XInternAtom(_glfw.x11.display, "XdndDrop", False);
     _glfw.x11.XdndFinished = XInternAtom(_glfw.x11.display, "XdndFinished", False);
@@ -1193,6 +1194,7 @@ GLFWbool _glfwConnectX11(int platformID, _GLFWplatform* platform)
         _glfwWindowVisibleX11,
         _glfwWindowMaximizedX11,
         _glfwWindowHoveredX11,
+        _glfwWindowDraggingX11,
         _glfwFramebufferTransparentX11,
         _glfwGetWindowOpacityX11,
         _glfwSetWindowResizableX11,

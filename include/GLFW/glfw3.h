@@ -1010,6 +1010,12 @@ extern "C" {
  */
 #define GLFW_DOUBLEBUFFER           0x00021010
 
+/*! @brief Drag and Drop dragging window attribute.
+ *
+ *  Drag and Drop dragging [window attribute](@ref GLFW_DRAGGING_attrib).
+ */
+#define GLFW_DRAGGING           0x00021011
+
 /*! @brief Context client API hint and attribute.
  *
  *  Context client API [hint](@ref GLFW_CLIENT_API_hint) and
